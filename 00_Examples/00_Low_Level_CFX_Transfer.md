@@ -1,26 +1,28 @@
-# MetaMask Quick Start
+# ConfluxPortal Quick Start
 
-Do you prefer to just copy and paste some working code? Here is a simple but complete working MetaMask tipping application.
+Do you prefer to just copy and paste some working code? Here is a simple but
+complete working ConfluxPortal tipping application. 
 
-Below the code snippet, we'll include some links to some related valuable resources.
+Below the code snippet, we'll include some links to some related valuable
+resources. 
 
 ```javascript
-// Let's imagine you want to receive an ether tip
+// Let's imagine you want to receive an cfx tip
 const yourAddress = '0x0c54FcCd2e384b4BB6f2E405Bf5Cbc15a017AaFb'
 const value = '0xde0b6b3a7640000' // an ether has 18 decimals, here in hex.
-const desiredNetwork = '1' // '1' is the Ethereum main network ID.
+const desiredNetwork = '1' // '1' is the Conflux main network ID.
 
-// Detect whether the current browser is ethereum-compatible,
+// Detect whether the current browser is conflux-compatible,
 // and handle the case where it isn't:
-if (typeof window.ethereum === 'undefined') {
+if (typeof window.conflux === 'undefined') {
   alert('Looks like you need a Dapp browser to get started.')
-  alert('Consider installing MetaMask!')
+  alert('Consider installing ConfluxPortal!')
 
 } else {
 
-  // In the case the user has MetaMask installed, you can easily
+  // In the case the user has ConfluxPortal installed, you can easily
   // ask them to sign in and reveal their accounts:
-  ethereum.enable()
+  conflux.enable()
 
   // Remember to handle the case they reject the request:
   .catch(function (reason) {
@@ -35,8 +37,8 @@ if (typeof window.ethereum === 'undefined') {
   // In the case they approve the log-in request, you'll receive their accounts:
   .then(function (accounts) {
     // You also should verify the user is on the correct network:
-    if (ethereum.networkVersion !== desiredNetwork) {
-      alert('This application requires the main network, please switch it in your MetaMask UI.')
+    if (conflux.networkVersion !== desiredNetwork) {
+      alert('This application requires the main network, please switch it in your ConfluxPortal UI.')
 
       // We plan to provide an API to make this request in the near future.
       // https://github.com/MetaMask/metamask-extension/issues/3663
@@ -45,7 +47,7 @@ if (typeof window.ethereum === 'undefined') {
     // Once you have a reference to user accounts,
     // you can suggest transactions and signatures:
     const account = accounts[0]
-    sendEtherFrom(account, function (err, transaction) {
+    sendCFXFrom(account, function (err, transaction) {
       if (err) {
         return alert(`Sorry you weren't able to contribute!`)
       }
@@ -56,10 +58,10 @@ if (typeof window.ethereum === 'undefined') {
   })
 }
 
-function sendEtherFrom (account, callback) {
+function sendCFXFrom (account, callback) {
 
   // We're going to use the lowest-level API here, with simpler example links below
-  const method = 'eth_sendTransaction'
+  const method = 'cfx_sendTransaction'
   const parameters = [{
     from: account,
     to: yourAddress,
@@ -76,7 +78,7 @@ function sendEtherFrom (account, callback) {
 
   // Methods that require user authorization like this one will prompt a user interaction.
   // Other methods (like reading from the blockchain) may not.
-  ethereum.sendAsync(payload, function (err, response) {
+  conflux.sendAsync(payload, function (err, response) {
     const rejected = 'User denied transaction signature.'
     if (response.error && response.error.message.includes(rejected)) {
       return alert(`We can't take your money without your permission.`)
@@ -101,13 +103,13 @@ function sendEtherFrom (account, callback) {
 function pollForCompletion (txHash, callback) {
   let calledBack = false
 
-  // Normal ethereum blocks are approximately every 15 seconds.
+  // Normal conflux blocks are approximately every 15 seconds.
   // Here we'll poll every 2 seconds.
   const checkInterval = setInterval(function () {
 
     const notYet = 'response has no error or result'
-    ethereum.sendAsync({
-      method: 'eth_getTransactionByHash',
+    conflux.sendAsync({
+      method: 'cfx_getTransactionByHash',
       params: [ txHash ],
     }, function (err, response) {
       if (calledBack) return
@@ -131,12 +133,13 @@ function pollForCompletion (txHash, callback) {
 }
 ```
 
-Now that was all very low level, but should show you how MetaMask works at its simplest, and lowest level!
+Now that was all very low level, but should show you how ConfluxPortal works at
+its simplest, and lowest level! 
 
-Now you can read more about this [ethereum API](./API_Reference), or maybe get acquainted with a convenience library so you don't have to interact with it directly:
+Now you can read more about this [conflux API](./API_Reference), or maybe get
+acquainted with a convenience library so you don't have to interact with it
+directly: 
 
-- [ethjs](https://www.npmjs.com/package/ethjs)
-- [truffle](https://truffleframework.com/)
-- [Embark](https://embark.status.im/)
-- [web3](https://www.npmjs.com/package/web3)
+- [js-conflux-sdk](https://www.npmjs.com/package/js-conflux-sdk)
+- [conffle](https://github.com/liuis/conffle#readme)
 

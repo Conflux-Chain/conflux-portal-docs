@@ -1,10 +1,10 @@
-<img src="https://metamask.io/img/metamask.png" width="60" height="auto">
+<img src="https://www.conflux-chain.org/icons/icon-48x48.png" width="60" height="auto">
 
-MetaMask project documentation
+ConfluxPortal project documentation
 
-https://metamask.github.io/metamask-docs/
+https://conflux-chain.github.io/conflux-portal-docs/
 
-[![CircleCI](https://circleci.com/gh/MetaMask/metamask-docs/tree/master.svg?style=shield)](https://circleci.com/gh/MetaMask/metamask-docs/tree/master)
+[![CircleCI](https://circleci.com/gh/Conflux-Chain/conflux-portal-docs/tree/master.svg?style=shield)](https://circleci.com/gh/Conflux-Chain/conflux-portal-docs/tree/master)
 
 ## Usage
 

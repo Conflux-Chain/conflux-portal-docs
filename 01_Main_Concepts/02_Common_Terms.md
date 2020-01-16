@@ -2,10 +2,10 @@
 
 ## Words are Hard
 <p id="agoctitecs_p">
-  This is a list of terms you might encounter when using the MetaMask interface.
+  This is a list of terms you might encounter when using the ConfluxPortal interface.
 </p>
 
-#### [You can also read in Spanish](https://kb.myetherwallet.com/las-palabras-son-dificiles-definiendo-terminos-comunes-de-ethereum), thanks to [faraggi](https://github.com/faraggi/words-are-hard-es/blob/master/words-are-hard-es.md)
+<!-- #### [You can also read in Spanish](https://kb.myetherwallet.com/las-palabras-son-dificiles-definiendo-terminos-comunes-de-metamask), thanks to [faraggi](https://github.com/faraggi/words-are-hard-es/blob/master/words-are-hard-es.md) -->
 
 ---
 
@@ -13,7 +13,7 @@
 <ul>
   <li id="wallet_l1">The interface / client / wrapper / holder that you use to manage your account(s).</li>
 
-  <li id="wallet_l2">Example: MetaMask.io, your Ledger Hardware Wallet, a Multisig Wallet Contract.</li>
+  <li id="wallet_l2">Example: ConfluxPortal, your Ledger Hardware Wallet, a Multisig Wallet Contract.</li>
 </ul>
 
 ### Account
@@ -22,7 +22,7 @@
 
   <li id="account_l2">Your funds are actually stored on the blockchain, not in the wallet or account.</li>
 
-  <li id="account_l3"> Just like your Reddit account has a <code> username (public)</code> and <code> password (private)</code>, so does your Ethereum account. For additional security, you can use a password to encrypt your private key which would result in a <code> username (public)</code> and <code> password (private)</code> and <code> password for that password (private + more secure)</code>. See the <code> Keystore File</code> section. </li>
+  <li id="account_l3"> Just like your Reddit account has a <code> username (public)</code> and <code> password (private)</code>, so does your Conflux account. For additional security, you can use a password to encrypt your private key which would result in a <code> username (public)</code> and <code> password (private)</code> and <code> password for that password (private + more secure)</code>. See the <code> Keystore File</code> section. </li>
 </ul>
 
 ### Address _("Public Key")_
@@ -30,16 +30,16 @@
   <li id="address_l1">You use this to send funds <b>to</b> an account.</li>
   <li id="address_l2">Sometimes referred to as the "public key"</li>
   <li id="address_l3">A string made up of <code>0x</code> + <code>40 hexadecimal characters</code>.</li>
-  <li id="address_l4">In Ethereum, the address begins with <code>0x</code>.</li>
-  <li id="address_l5">Example: <code>0x06A85356DCb5b307096726FB86A78c59D38e08ee</code></li>
+  <li id="address_l4">In Conflux, the address begins with <code>0x</code>.</li>
+  <li id="address_l5">Example: <code>0x06a85356dcb5b307096726fb86a78c59d38e08ee</code></li>
 </ul>
 
 ### Public Key
 <ul>
   <li id="pubk_l1">In cryptography, you have a keypair: the public and private key.</li>
   <li id="pubk_l2">You can derive a public key from a private key, but cannot derive a private key from a public key.</li>
-  <li id="pubk_l3">(Advanced) In Ethereum, the address "acts" like the public key, but it's not actually the public key.</li>
-  <li id="pubk_l4">(Advanced) In Ethereum, the public key is derived from the private key and is 128 hex characters. You then take the <code>"SHA3" (Keccak-256)</code> hash of this (64 characters), take the last 40 characters, and prefix with <code>0x</code>, give you your 42-character address.</li>
+  <li id="pubk_l3">(Advanced) In Conflux, the address "acts" like the public key, but it's not actually the public key.</li>
+  <li id="pubk_l4">(Advanced) In Conflux, the public key is derived from the private key and is 128 hex characters. You then take the <code>"SHA3" (Keccak-256)</code> hash of this (64 characters), take the last 40 characters, and prefix with <code>0x</code>, give you your 42-character address.</li>
 </ul>
 
 ### Private Key
@@ -89,7 +89,7 @@
     A (typically) 12 or 24 word phrase that allows you to access infinite number of accounts.
   </li>
   <li id="mphrase_l3">
-    Used by Ledger, TREZOR, MetaMask, Jaxx, and others.
+    Used by Ledger, TREZOR, ConfluxPortal, Jaxx, and others.
   </li>
   <li id="mphrase_l4">
     Originates from <a href='https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki' target='_blank'>BIP 39 Spec</a>.
@@ -146,7 +146,7 @@
 ### Hexadecimal
 <ul>
   <li id="hexadecimal_l">
-    Used all over Ethereum for a variety of things, a hexadecimal string is comprised of the numbers <code>0 1 2 3 4 5 6 7 8 9</code> and <code>A B C D E F</code>
+    Used all over Conflux for a variety of things, a hexadecimal string is comprised of the numbers <code>0 1 2 3 4 5 6 7 8 9</code> and <code>A B C D E F</code>
   </li>
 </ul>
 
@@ -172,7 +172,7 @@
     Brain wallets can be brute forced by super fast computers.
   </li>
   <li id="bw_l4">
-    <a href='https://www.reddit.com/r/ethereum/comments/45y8m7/brain_wallets_are_now_generally_shunned_by/' target='_blank'> Brain wallet are insecure. </a>
+    <a href='https://www.reddit.com/r/metamask/comments/45y8m7/brain_wallets_are_now_generally_shunned_by/' target='_blank'> Brain wallet are insecure. </a>
   </li>
   <li id="bw_l5">
     Don't use brain wallets.
@@ -192,7 +192,7 @@
     Usually defined in "bits of entropy" or the number of years it would take to brute-force a <b>\_\_\_\_</b> (e.g. private key) derived with that much entropy.
   </li>
   <li id="entropy_l4">
-    Ethereum private keys are 256-bit keys
+    Conflux private keys are 256-bit keys
   </li>
   <li id="entropy_l5">
     24-Word mnemonic phrases are also 256 bits of entropy. 2048 words in the dictionary. 11 bits of entropy (the words). <code>11 * 24 = 264</code>. The last word is a checksum.
@@ -251,7 +251,7 @@
 ### Trustless
 <ul>
   <li id="trustless_l">
-    A distributed trustless consensus which the blockchain is responsible for. Since everyone has a copy of the ledger of all transactions ever executed, there is no need for a third-party. You can verify the transactions yourself, however the Ethereum blockchain and Bitcoin blockchain were created to ensure rules and agreements between all parties are executed when all conditions are met.
+    A distributed trustless consensus which the blockchain is responsible for. Since everyone has a copy of the ledger of all transactions ever executed, there is no need for a third-party. You can verify the transactions yourself, however the Conflux blockchain and Bitcoin blockchain were created to ensure rules and agreements between all parties are executed when all conditions are met.
   </li>
 </ul>
 
@@ -272,5 +272,3 @@
 <p id="fixGlossary">
   All feedback, rewrites, clarification, typo-fixing, and requests for additions are more than welcome. ?
 </p>
-
-<p>Thanks to <a href="https://support.mycrypto.com/getting-started/ethereum-glossary.html">MyCrypto</a> for this Glossary's starting point</p>
