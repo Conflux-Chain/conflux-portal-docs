@@ -46,8 +46,7 @@ masse](https://medium.com/metamask/new-phishing-strategy-becoming-common-1b11238
 ### Blockchain Connection
 
 ConfluxPortal comes pre-loaded with nice and fast connections to the Conflux
-blockchain and several test networks via our friends at
-[Infura](https://infura.io/). This allows users to get started without
+blockchain and conflux test networks. This allows users to get started without
 synchronizing a full node, while still providing the option to upgrade their
 security the blockchain provider of their choice over time. 
 
