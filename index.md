@@ -1,7 +1,6 @@
 # ConfluxPortal Developer Documentation
 
-![Conflux Logo](https://www.conflux-chain.org/icons/icon-48x48.png)
-
+<!-- ![Conflux Logo](https://www.conflux-chain.org/icons/icon-48x48.png) -->
 Welcome to ConfluxPortal's Developer Documentation. ConfluxPortal is Conflux
 version of [MetaMask](https://github.com/MetaMask/metamask-extension#readme).
 This documentation is for learning to develop applications for ConfluxPortal.  
