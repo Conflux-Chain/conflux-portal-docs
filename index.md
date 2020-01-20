@@ -5,11 +5,13 @@ Welcome to ConfluxPortal's Developer Documentation. ConfluxPortal is Conflux
 version of [MetaMask](https://github.com/MetaMask/metamask-extension#readme).
 This documentation is for learning to develop applications for ConfluxPortal.  
 
-- You can find the latest version of ConfluxPortal on [our official
-  website](https://github.com/Conflux-Chain/conflux-portal). 
+- You can find the latest version of ConfluxPortal on [the github release
+page](https://github.com/Conflux-Chain/conflux-portal/releases) and installation
+instructions [in this
+issue](https://github.com/Conflux-Chain/conflux-portal/issues/31). 
 - For help using ConfluxPortal, [submit
   issues](https://github.com/Conflux-Chain/conflux-portal/issues/new/choose)
-  in our github repo.   
+  in our github repo.
 - To learn how to contribute to the ConfluxPortal project itself, visit our
   [Internal
   Docs](https://github.com/Conflux-Chain/conflux-portal/tree/develop/docs). 
