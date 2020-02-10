@@ -1,7 +1,8 @@
 # Getting Started
 
 To develop for ConfluxPortal, you're first going to want to get ConfluxPortal
-installed on your development machine. [Download here](http://13.57.190.119:9000/). 
+installed on your development machine. [Download
+here](https://github.com/Conflux-Chain/conflux-portal/releases).  
 
 Once you have it running, you should find that new browser tabs have a
 `window.conflux` object available in the console. This is the way ConfluxPortal
