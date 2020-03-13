@@ -1,3 +1,8 @@
+---
+id: quick_start
+title: Quick Start
+---
+
 # ConfluxPortal Quick Start
 
 Do you prefer to just copy and paste some working code? Here is a simple but
