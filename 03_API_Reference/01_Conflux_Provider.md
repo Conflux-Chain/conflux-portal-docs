@@ -261,7 +261,7 @@ conflux.send('cfx_requestAccounts')
 })
 ```
 
-### conflux.send(method: string, params: Array<any>)
+### `conflux.send(method: string, params: Array<any>)`
 
 The way to send requests to the dapp browser. `method` and `params` should
 follow [the Conflux JSON-RPC
