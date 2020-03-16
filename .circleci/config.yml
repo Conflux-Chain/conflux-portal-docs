@@ -1,9 +1,21 @@
-version: 2
+version: 2.1
+workflows:
+  deploy:
+    jobs:
+      - build-and-deploy:
+          filters:
+            branches:
+              only:
+                - master
+  trigger-devdoc:
+    jobs:
+      - trigger-devdoc:
+          filters:
+            branches:
+              only:
+                - master
 jobs:
-  build:
-    branches:
-      ignore:
-        - gh-pages
+  build-and-deploy:
     docker:
       - image: circleci/node:11
     environment:
@@ -30,3 +42,8 @@ jobs:
               git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
               git push origin $TARGET_BRANCH
             fi
+
+  trigger-devdoc:
+    machine: true
+    steps:
+      - run: curl -X POST "https://circleci.com/api/v1.1/project/github/Conflux-Chain/conflux-developer-site/build?circle-token=${CIRCLE_API_USER_TOKEN}"
