@@ -29,14 +29,16 @@ jobs:
             if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
               git config --global user.email $GH_EMAIL
               git config --global user.name $GH_NAME
-              git clone $CIRCLE_REPOSITORY_URL project
 
-              cd project
-              rm -rf .circleci
-              npx uncrate
+              yarn --frozen-lockfile
+              yarn build
+
+              mkdir ../project-gh-pages
+              cp -r .git ../project-gh-pages
+              cd ../project-gh-pages
               git checkout $TARGET_BRANCH
-              cp -r dist/* .
-              rm -rf dist
+
+              cp -r ../project/build/* .
 
               git add -A
               git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
