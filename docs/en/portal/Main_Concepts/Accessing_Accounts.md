@@ -9,8 +9,8 @@ methods involve a signature or transaction approval. All of those methods
 require the sending account as a function parameter:
 
 - `cfx_sendTransaction`
-- `cfx_sign` (insecure and unadvised to use)
-- `personal_sign`
+<!-- - `cfx_sign` (insecure and unadvised to use) -->
+<!-- - `personal_sign` -->
 <!-- - `cfx_signTypedData` -->
 
 Once you've [connected to a user](./Getting_Started.md), you can always re-check
