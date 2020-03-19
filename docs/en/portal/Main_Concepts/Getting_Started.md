@@ -1,7 +1,7 @@
 ---
 id: getting_started
 title: Getting Started
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Main_Concepts/Getting_Started.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Getting_Started.md
 ---
 To develop for Conflux Portal, you're first going to want to get Conflux Portal
 installed on your development machine. [Download

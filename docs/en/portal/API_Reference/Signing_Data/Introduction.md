@@ -1,7 +1,7 @@
 ---
 id: signing_data_with_portal
 title: Signing Data with Conflux Portal
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/Signing_Data/Introduction.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Signing_Data/Introduction.md
 ---
 If you'd like to jump to some working signature examples, [you can visit this
 repository](https://github.com/danfinlay/js-eth-personal-sign-examples). 

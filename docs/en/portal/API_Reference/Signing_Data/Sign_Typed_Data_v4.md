@@ -1,7 +1,7 @@
 ---
 id: sign_typed_data_v4
 title: Sign Typed Data v4
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/Signing_Data/Sign_Typed_Data_v4.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Signing_Data/Sign_Typed_Data_v4.md
 ---
 The method `signTypedData_v4` currently represents the latest version of the
 [EIP 712 spec](https://eips.ethereum.org/EIPS/eip-712), with added support for

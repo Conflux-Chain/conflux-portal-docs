@@ -1,7 +1,7 @@
 ---
 id: personal_sign
 title: Personal Sign
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/Signing_Data/Personal_Sign.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Signing_Data/Personal_Sign.md
 ---
 We introduced the `personal_sign` method in March 2017 with [this blog
 post](https://medium.com/metamask/the-new-secure-way-to-sign-data-in-your-browser-6af9dd2a1527). 

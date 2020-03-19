@@ -1,7 +1,7 @@
 ---
 id: initializing_dapps
 title: Initializing Dapps
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Main_Concepts/Initializing_Dapps.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Initializing_Dapps.md
 ---
 Once you have your basic dev environment [set up](./Getting_Started.md), you are
 ready to start interacting with some smart contracts. There are some basic

@@ -1,7 +1,7 @@
 ---
 id: provider_api
 title: Conflux Provider API
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/Conflux_Provider.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Conflux_Provider.md
 ---
 Conflux Portal injects a global API into websites visited by its users at
 `window.conflux`. This API allows websites to request user login, load data from

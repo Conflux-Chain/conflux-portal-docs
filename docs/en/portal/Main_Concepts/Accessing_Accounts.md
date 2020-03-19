@@ -1,7 +1,7 @@
 ---
 id: accessing_accounts
 title: Accessing Accounts
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Main_Concepts/Accessing_Accounts.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Accessing_Accounts.md
 ---
 User accounts are used in a variety of contexts in Conflux, they serve as neat
 identifiers, but no use is as important as calling _wallet methods_. These

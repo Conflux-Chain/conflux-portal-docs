@@ -1,7 +1,7 @@
 ---
 id: best_practices
 title: Best Practices
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Best_Practices.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Best_Practices.md
 ---
 
 ## Registering Your Contract's Method Names

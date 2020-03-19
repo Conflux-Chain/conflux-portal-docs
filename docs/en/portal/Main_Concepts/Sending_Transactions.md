@@ -1,7 +1,7 @@
 ---
 id: sending_transactions
 title: Sending Transactions
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Main_Concepts/Sending_Transactions.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Sending_Transactions.md
 ---
 Transactions are a formal action on a blockchain. They are always initiated in
 Conflux Portal with a call to the `cfx_sendTransaction` method. They can involve

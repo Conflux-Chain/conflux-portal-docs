@@ -1,7 +1,7 @@
 ---
 id: experimental_api
 title: Experimental APIs
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/Experimental_APIs.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Experimental_APIs.md
 ---
 ## wallet_watchAsset
 

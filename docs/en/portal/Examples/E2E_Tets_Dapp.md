@@ -1,7 +1,7 @@
 ---
 id: e2e_test_demo
 title: A Demo Dapp We Are Using To Test Conflux Portal
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Quick_Start/E2E_Tets_Dapp.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Quick_Start/E2E_Tets_Dapp.md
 ---
 
 [Here](http://13.57.190.119:9000/contract.html) is a page for testing Conflux

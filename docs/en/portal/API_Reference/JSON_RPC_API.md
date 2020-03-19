@@ -1,7 +1,7 @@
 ---
 id: json_rpc_api
 title: The Conflux RPC API
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/JSON_RPC_API.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/JSON_RPC_API.md
 ---
 Conflux Portal uses the `conflux.sendAsync()` (and soon, `conflux.send()`) API
 to wrap an RPC API which is based on an interface exposed by all Conflux

@@ -1,7 +1,7 @@
 ---
 id: cfx_sign
 title: CFX Sign
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/API_Reference/Signing_Data/CFX_Sign.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Signing_Data/CFX_Sign.md
 ---
 The CFX Sign method is the oldest signing method in Conflux, and can sign any
 binary data, making it a dangerous method that can potentially sign transactions

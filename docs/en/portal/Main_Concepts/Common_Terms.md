@@ -1,7 +1,7 @@
 ---
 id: common_terms
 title: Common Terms
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Main_Concepts/Common_Terms.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Common_Terms.md
 ---
 ## Words are Hard
 <p id="agoctitecs_p">

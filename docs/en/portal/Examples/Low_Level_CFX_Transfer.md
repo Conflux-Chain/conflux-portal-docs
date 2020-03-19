@@ -1,7 +1,7 @@
 ---
 id: quick_start
 title: Quick Start
-custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/Quick_Start/Low_Level_CFX_Transfer.md
+custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Quick_Start/Low_Level_CFX_Transfer.md
 ---
 Do you prefer to just copy and paste some working code? Here is a simple but
 complete working Conflux Portal tipping application. 
