@@ -75,7 +75,7 @@ example values:
 Returns a hex-prefixed string representing the current user's selected address,
 ex: `"0xfdea65c8e26263f6d9a1b5de9555d2931a33b825"`. 
 
-### conflux.isConflux Portal
+### conflux.isConfluxPortal
 
 Returns `true` or `false`, representing whether the user has Conflux Portal
 installed. 
