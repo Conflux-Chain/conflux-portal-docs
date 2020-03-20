@@ -16,5 +16,5 @@ Portal functions. It contains code examples for testing:
 - `cfx_sign` (deprecated)
 
 You can find the source code on
-[github](https://github.com/Conflux-Chain/conflux-portal/blob/cfx-test/test/e2e/contract-test/)
-or just download the page and use it at your purpose.  
+[github](https://github.com/Conflux-Chain/conflux-portal/blob/develop/test/e2e/contract-test/contract.js)
+or just download the page and use it at your purpose. 
