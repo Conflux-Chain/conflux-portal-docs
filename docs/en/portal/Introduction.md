@@ -1,6 +1,6 @@
 ---
 id: introduction
-title: Conflux Portal
+title: What Is Conflux Portal
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Introduction.md
 ---
 <!-- ![Conflux Logo](https://www.conflux-chain.org/icons/icon-48x48.png) -->
