@@ -29,17 +29,7 @@ module.exports = {
           { type: "doc", id: "provider_api" },
           { type: "doc", id: "json_rpc_api" },
           { type: "doc", id: "experimental_api" },
-          // {
-          //   type: "doc",
-          //   label: "Signing Data",
-          //   items: [
-          //     { type: "doc", id: "signing_data_with_portal" },
-          //     { type: "doc", id: "cfx_sign" },
-          //     { type: "doc", id: "sign_typed_data_v1" },
-          //     { type: "doc", id: "sign_typed_data_v3" },
-          //     { type: "doc", id: "sign_typed_data_v4" }
-          //   ]
-          // }
+          { type: "doc", id: "signing_data_with_portal" }
         ]
       },
       {
