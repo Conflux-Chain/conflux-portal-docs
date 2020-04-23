@@ -6,24 +6,24 @@ custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/maste
 
 ## Registering Your Contract's Method Names
 
-Conflux Portal uses the parity on-chain registry of function signatures to
+ConfluxPortal uses the parity on-chain registry of function signatures to
 display method names on the confirm screen. For many common method names, like
-token methods, this allows Conflux Portal to successfully look up the method
+token methods, this allows ConfluxPortal to successfully look up the method
 names by their [method
 signature](https://solidity.readthedocs.io/en/v0.4.21/abi-spec.html).
 
 However, sometimes you're using a method that is not in that on-chain registry,
-and Conflux Portal will simply display `Unknown Function` to the user.  
+and ConfluxPortal will simply display `Unknown Function` to the user.  
 
 To add your contract's function names to this registry so it shows in the
-Conflux Portal interface, follow the below steps. 
+ConfluxPortal interface, follow the below steps. 
 
 _We (conflux) don't support below features right now._ 
 
 1. Go to the [mainnet parity signature registration contract on
    etherscan](https://etherscan.io/address/0x44691b39d1a75dc4e0a0346cbb15e310e6ed1e86#writeContract) 
 
-2. Connect Conflux Portal
+2. Connect ConfluxPortal
 
 3. Use etherscan's write contract feature to input the string value (without
    quotes or spaces) to the register function 
@@ -36,7 +36,7 @@ _We (conflux) don't support below features right now._
 
 4. Press write
 
-5. Approve the transaction through Conflux Portal (you only pay gas)
+5. Approve the transaction through ConfluxPortal (you only pay gas)
 
 
 ### Verify
@@ -64,11 +64,11 @@ signature registry contract, press the Details button on the compile tab.
 ### Additional Info
 You can also use the [signature
 registry](https://rinkeby.etherscan.io/address/0x0c0831fb1ec7442485fb41a033ba188389a990b4)
-deployed on rinkeby but should note that **Conflux Portal reads from the mainnet
+deployed on rinkeby but should note that **ConfluxPortal reads from the mainnet
 eth-method-registry endpoint, regardless of user's network** 
 
 [eth-method-registry](https://github.com/danfinlay/eth-method-registry) is used
-to lookup methods in Conflux Portal. 
+to lookup methods in ConfluxPortal. 
 
 This [stack
 exchange](https://conflux.stackexchange.com/questions/59678/metamask-shows-unknown-function-when-calling-method-send-function)
@@ -76,8 +76,8 @@ answer is a good **tldr**.
 
 ## Registering Tokens with Users
 
-When a user opens their Conflux Portal, they are shown a variety of assets,
-including tokens. By default, Conflux Portal auto-detects some major popular
+When a user opens their ConfluxPortal, they are shown a variety of assets,
+including tokens. By default, ConfluxPortal auto-detects some major popular
 tokens and auto-displays them, but for most tokens, the user will need to add
 the token themselves. 
 
@@ -86,7 +86,7 @@ can be cumbersome, and involves the user interacting with contract addresses,
 and is very error prone. 
 
 You can greatly improve the security and experience of users adding your token
-to their Conflux Portal by taking advantage of the `wallet_watchAsset` API as
+to their ConfluxPortal by taking advantage of the `wallet_watchAsset` API as
 defined in [EIP
 747](https://github.com/estebanmino/EIPs/blob/master/EIPS/eip-747.md). 
 

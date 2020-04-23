@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
-  title: 'Conflux Portal Developer',
-  tagline: 'Conflux Portal Documentation',
+  title: 'ConfluxPortal Developer',
+  tagline: 'ConfluxPortal Documentation',
   url: 'https://conflux-chain.github.io/conflux-portal-docs/',
   baseUrl: process.env.NODE_ENV === "production" ? '/conflux-portal-docs/' : '/',
   favicon: 'img/favicon.ico',
@@ -10,7 +10,7 @@ module.exports = {
   themeConfig: {
     sidebarCollapsible: false,
     navbar: {
-      title: 'Conflux Portal Documentation',
+      title: 'ConfluxPortal Documentation',
       logo: {
         alt: 'Conflux Logo',
         src: 'img/logo.svg',

@@ -4,7 +4,7 @@ title: Quick Start
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Quick_Start/Low_Level_CFX_Transfer.md
 ---
 Do you prefer to just copy and paste some working code? Here is a simple but
-complete working Conflux Portal tipping application. 
+complete working ConfluxPortal tipping application. 
 
 Below the code snippet, we'll include some links to some related valuable
 resources. 
@@ -19,11 +19,11 @@ const desiredNetwork = '1' // '1' is the Conflux main network ID.
 // and handle the case where it isn't:
 if (typeof window.conflux === 'undefined') {
   alert('Looks like you need a Dapp browser to get started.')
-  alert('Consider installing Conflux Portal!')
+  alert('Consider installing ConfluxPortal!')
 
 } else {
 
-  // In the case the user has Conflux Portal installed, you can easily
+  // In the case the user has ConfluxPortal installed, you can easily
   // ask them to sign in and reveal their accounts:
   conflux.enable()
 
@@ -41,7 +41,7 @@ if (typeof window.conflux === 'undefined') {
   .then(function (accounts) {
     // You also should verify the user is on the correct network:
     if (conflux.networkVersion !== desiredNetwork) {
-      alert('This application requires the main network, please switch it in your Conflux Portal UI.')
+      alert('This application requires the main network, please switch it in your ConfluxPortal UI.')
 
       // We plan to provide an API to make this request in the near future.
       // https://github.com/MetaMask/metamask-extension/issues/3663
@@ -136,7 +136,7 @@ function pollForCompletion (txHash, callback) {
 }
 ```
 
-Now that was all very low level, but should show you how Conflux Portal works at
+Now that was all very low level, but should show you how ConfluxPortal works at
 its simplest, and lowest level! 
 
 Now you can read more about this [conflux

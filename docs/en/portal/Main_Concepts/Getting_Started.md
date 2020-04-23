@@ -3,12 +3,12 @@ id: getting_started
 title: Getting Started
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Getting_Started.md
 ---
-To develop for Conflux Portal, you're first going to want to get Conflux Portal
+To develop for ConfluxPortal, you're first going to want to get ConfluxPortal
 installed on your development machine. [Download
 here](https://github.com/Conflux-Chain/conflux-portal/releases).   
 
 Once you have it running, you should find that new browser tabs have a
-`window.conflux` object available in the console. This is the way Conflux Portal
+`window.conflux` object available in the console. This is the way ConfluxPortal
 provides for you to interact with it.  
 
 You can review the full API for that object [here](../API_Reference/Conflux_Provider.md).
@@ -18,12 +18,12 @@ You can review the full API for that object [here](../API_Reference/Conflux_Prov
 ### ConfluxJS Browser Detection
 
 The first thing your app will want to do is verify whether the user is using
-Conflux Portal or not, which is simple using a check like `if (typeof
+ConfluxPortal or not, which is simple using a check like `if (typeof
 window.conflux !== 'undefined') { /* deal with it */ }`. 
 
 ### Running a Test Network
 
-In the top right menu of Conflux Portal, you can select the network that you are
+In the top right menu of ConfluxPortal, you can select the network that you are
 currently connected to. Among several popular defaults, you'll find `Custom RPC`
 and `Localhost 12539`. These are both useful for connecting to a test
 blockchain, like [conflux local network
@@ -33,30 +33,30 @@ ganache-cli && ganache-cli`.
 
 <!-- Ganache has some great features for starting it up with different states. If you -->
 <!-- start it with the `-m` flag, you can feed it the same seed phrase you have in -->
-<!-- your Conflux Portal, and the test network will give your first 10 accounts 100 -->
+<!-- your ConfluxPortal, and the test network will give your first 10 accounts 100 -->
 <!-- test ether each, which makes it easier to start work.  -->
 
 Since your seed phrase is the power to control all your accounts, it is probably
 worth keeping at least one seed phrase for development, separate from any that
 you use for storing real value. One easy way to manage multiple seed phrases
-with Conflux Portal is with multiple browser profiles, each of which can have
+with ConfluxPortal is with multiple browser profiles, each of which can have
 its own clean extension installations.  
 
 #### Resetting Your Local Nonce Calculation
 
 If you're running a test blockchain, and then restart it, you can accidentally
-confuse Conflux Portal, because it calculates the next
+confuse ConfluxPortal, because it calculates the next
 [nonce](./Sending_Transactions.md#nonce-[ignored]) based on both the network
 state _and_ the known sent transactions.  
 
-To clear Conflux Portal's transaction queue, and effectively reset its nonce
+To clear ConfluxPortal's transaction queue, and effectively reset its nonce
 calculation, you can use the `Reset Account` button in `Settings` (available in
 the top-right sandwich menu). 
 
-### Detecting Conflux Portal
+### Detecting ConfluxPortal
 
-If you want to differentiate Conflux Portal from other conflux-compatible
-browsers, you can detect Conflux Portal using `conflux.isConflux Portal`. 
+If you want to differentiate ConfluxPortal from other conflux-compatible
+browsers, you can detect ConfluxPortal using `conflux.isConfluxPortal`. 
 
 ### User State
 
@@ -70,9 +70,9 @@ Both of these are available synchronously as `conflux.networkVersion` and
 `conflux.selectedAddress`. You can listen for changes using events too, see
 ([the API reference](../API_Reference/Conflux_Provider.md)).
 
-### Connecting to Conflux Portal
+### Connecting to ConfluxPortal
 
-"Connecting" or "logging in" to Conflux Portal effectively means "to access the
+"Connecting" or "logging in" to ConfluxPortal effectively means "to access the
 user's Conflux account(s)".
 
 You should **only** initiate a connection request in response to direct user

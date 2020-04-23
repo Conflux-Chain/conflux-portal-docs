@@ -1,13 +1,13 @@
 ---
 id: e2e_test_demo
-title: A Demo Dapp We Are Using To Test Conflux Portal
+title: A Demo Dapp We Are Using To Test ConfluxPortal
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Quick_Start/E2E_Tets_Dapp.md
 ---
 
 [Here](http://13.57.190.119:9000/contract.html) is a page for testing Conflux
 Portal functions. It contains code examples for testing: 
 
-- connect to Conflux Portal
+- connect to ConfluxPortal
 - deploy contract on Conflux Testnet
 - send CFX
 - deploy a ERC20 token and send the token

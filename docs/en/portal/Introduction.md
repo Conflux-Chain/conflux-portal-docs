@@ -1,10 +1,10 @@
 ---
 id: introduction
-title: What Is Conflux Portal
+title: What Is ConfluxPortal
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Introduction.md
 ---
 <!-- ![Conflux Logo](https://www.conflux-chain.org/icons/icon-48x48.png) -->
-Welcome to Conflux Portal's Developer Documentation. ConfluxPortal is Conflux
+Welcome to ConfluxPortal's Developer Documentation. ConfluxPortal is Conflux
 version of [MetaMask](https://github.com/MetaMask/metamask-extension#readme).
 This documentation is for learning to develop applications for ConfluxPortal.  
 

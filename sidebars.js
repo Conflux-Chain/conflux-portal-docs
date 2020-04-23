@@ -3,7 +3,7 @@ module.exports = {
     en: [
       {
         type: "category",
-        label: "Conflux Portal",
+        label: "ConfluxPortal",
         items: [{ type: "doc", id: "introduction" }]
       },
       {

@@ -3,7 +3,7 @@ id: provider_api
 title: Portal Provider API
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/API_Reference/Conflux_Provider.md
 ---
-Conflux Portal injects a global API into websites visited by its users at
+ConfluxPortal injects a global API into websites visited by its users at
 `window.conflux`. This API allows websites to request user login, load data from
 blockchains the user has a connection to, and suggest that the user sign
 messages and transactions. You can use this API to detect the user of an Conflux
@@ -38,7 +38,7 @@ here](https://medium.com/metamask/breaking-changes-to-the-metamask-inpage-provid
 
 We will begin supporting the new API in early 2020. AWe will support the old and
 new APIs for at least 6 weeks, after which some of the older methods will be
-deprecated. These changes will make the Conflux Portal inpage provider fully
+deprecated. These changes will make the ConfluxPortal inpage provider fully
 compatible with [EIP
 1193](https://github.com/conflux/EIPs/blob/master/EIPS/eip-1193.md) and [EIP
 1102](https://github.com/conflux/EIPs/blob/master/EIPS/eip-1102.md). 
@@ -77,7 +77,7 @@ ex: `"0xfdea65c8e26263f6d9a1b5de9555d2931a33b825"`.
 
 ### conflux.isConfluxPortal
 
-Returns `true` or `false`, representing whether the user has Conflux Portal
+Returns `true` or `false`, representing whether the user has ConfluxPortal
 installed. 
 
 ## Methods
@@ -161,14 +161,14 @@ conflux.sendAsync({
 
 ### conflux.autoRefreshOnNetworkChange (To Be Removed)
 
-_This will be removed on January 13, 2020. At this time, Conflux Portal will also
+_This will be removed on January 13, 2020. At this time, ConfluxPortal will also
 stop reloading the page on network changes._ _[Click
 here](https://medium.com/metamask/no-longer-reloading-pages-on-network-change-fbf041942b44)
 for more details._ 
 
-When the network is changed, Conflux Portal will reload any pages that have made
+When the network is changed, ConfluxPortal will reload any pages that have made
 requests to the provider. This automatic reload behavior will be removed in a
-future release of Conflux Portal, but in the meantime it can be disabled with
+future release of ConfluxPortal, but in the meantime it can be disabled with
 this flag. 
 
 To disable auto-refresh on a network change you can do:
@@ -180,7 +180,7 @@ conflux.autoRefreshOnNetworkChange = false;
 This can be toggled on or off at any time.
 
 **Note:** Setting this flag to `true` results in the default behavior, which is
-subject to change. If your site relies upon Conflux Portal reloading it upon
+subject to change. If your site relies upon ConfluxPortal reloading it upon
 network change, you will need to trigger the reload yourself in a
 `networkChanged` event handler to ensure it continues to work with future
 releases.  
@@ -201,8 +201,8 @@ conflux.on('accountsChanged', function (accounts) {
 **Note:** At the moment, the `networkChanged` event is only useful if you
 disable auto-refresh on network change by setting
 [`conflux.autoRefreshOnNetworkChange`](#conflux.autorefreshonnetworkchange) to
-`false`. Otherwise, Conflux Portal will default to auto-reloading pages upon
-network change if they have made requests to the provider. _Conflux Portal will
+`false`. Otherwise, ConfluxPortal will default to auto-reloading pages upon
+network change if they have made requests to the provider. _ConfluxPortal will
 stop reloading pages on network change on January 13, 2020, and this setting
 will be removed._ _[Click
 here](https://medium.com/metamask/no-longer-reloading-pages-on-network-change-fbf041942b44)
@@ -239,7 +239,7 @@ try {
 
 } catch (error) {
   if (error.code === 4001) { // EIP 1193 userRejectedRequest error
-    console.log('Please connect to Conflux Portal.')
+    console.log('Please connect to ConfluxPortal.')
   } else {
     console.error(error)
   }
@@ -257,7 +257,7 @@ conflux.send('cfx_requestAccounts')
 })
 .catch(function (error) {
   if (error.code === 4001) { // EIP 1193 userRejectedRequest error
-    console.log('Please connect to Conflux Portal.')
+    console.log('Please connect to ConfluxPortal.')
   } else {
     console.error(error)
   }
@@ -358,11 +358,11 @@ conflux.sendAsync({
 
 ## Properties
 
-Useful for knowing whether `window.conflux` is Conflux Portal, but not much else.
+Useful for knowing whether `window.conflux` is ConfluxPortal, but not much else.
 
-### conflux.isConflux Portal
+### conflux.isConfluxPortal
 
-`true` if the user has Conflux Portal installed, `false` otherwise.
+`true` if the user has ConfluxPortal installed, `false` otherwise.
 
 ### conflux.networkVersion (Deprecated)
 
