@@ -159,12 +159,12 @@ conflux.sendAsync({
 })
 ```
 
-### conflux.autoRefreshOnNetworkChange (To Be Removed)
+### conflux.autoRefreshOnNetworkChange <!-- (To Be Removed) -->
 
-_This will be removed on January 13, 2020. At this time, ConfluxPortal will also
-stop reloading the page on network changes._ _[Click
-here](https://medium.com/metamask/no-longer-reloading-pages-on-network-change-fbf041942b44)
-for more details._ 
+<!-- _This will be removed on January 13, 2020. At this time, ConfluxPortal will also -->
+<!-- stop reloading the page on network changes._ _[Click -->
+<!-- here](https://medium.com/metamask/no-longer-reloading-pages-on-network-change-fbf041942b44) -->
+<!-- for more details._  -->
 
 When the network is changed, ConfluxPortal will reload any pages that have made
 requests to the provider. This automatic reload behavior will be removed in a
