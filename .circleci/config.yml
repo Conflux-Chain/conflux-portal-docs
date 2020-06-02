@@ -35,6 +35,7 @@ jobs:
 
               mkdir ../project-gh-pages
               cp -r .git ../project-gh-pages
+              cp -r e2e_test_demo ../project-gh-pages
               cd ../project-gh-pages
               git checkout $TARGET_BRANCH
 
