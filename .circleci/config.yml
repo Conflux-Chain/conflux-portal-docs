@@ -35,11 +35,11 @@ jobs:
 
               mkdir ../project-gh-pages
               cp -r .git ../project-gh-pages
-              cp -r e2e_test_demo ../project-gh-pages
               cd ../project-gh-pages
               git checkout $TARGET_BRANCH
 
               cp -r ../project/build/* .
+              cp -r ../project/e2e_test_demo ../project-gh-pages/docs/portal/
 
               git add -A
               git commit -m "Automated deployment: ${CIRCLE_SHA1} [ci skip]" --allow-empty
