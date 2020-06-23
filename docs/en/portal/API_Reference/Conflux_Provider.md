@@ -66,8 +66,8 @@ Returns a numeric string representing the current blockchain's network ID. A few
 example values: 
 
 ```javascript
-'1': Conflux Main Network
-'2': Conflux Test network
+'0': Conflux Main Network
+'1': Conflux Test network
 ```
 
 ### conflux.selectedAddress
@@ -373,8 +373,8 @@ Returns a numeric string representing the current blockchain's network ID. A few
 example values: 
 
 ```javascript
-'1': Conflux Main Network
-'2': Conflux Test network
+'0': Conflux Main Network
+'1': Conflux Test network
 ```
 
 ### conflux.selectedAddress (Deprecated)
