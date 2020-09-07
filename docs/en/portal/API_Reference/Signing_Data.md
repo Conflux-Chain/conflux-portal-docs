@@ -6,7 +6,7 @@ custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/maste
 
 ## History of the signing methods
 
-Portal is forked from MetaMask and there are multiple signing methods in MetaMask. You can read the history of all the signing methods in [MetaMask documentation](https://docs.metamask.io/guide/signing-data.html#a-brief-history). 
+Portal is forked from MetaMask and there are multiple signing methods in MetaMask. You can read the history of all the signing methods in [MetaMask documentation](https://docs.metamask.io/guide/signing-data.html#a-brief-history).
 
 We reserved all these methods and made some changes. The usage and intention of all these methods are not changed. We will follow EIP-712 if there's new spec, say v5 of typed sign.
 
@@ -17,4 +17,4 @@ We reserved all these methods and made some changes. The usage and intention of 
 
 ## Demo
 
-[Here](../../../../e2e_test_demo/) is a demo page for testing ConfluxPortal. There's example code of calling `cfx_signTypedData_v4`, `personal_sign` and `cfx_sign` in it.
+[Here](https://conflux-portal-docs.conflux-chain.org/e2e_test_demo/) is a demo page for testing ConfluxPortal. There's example code of calling `cfx_signTypedData_v4`, `personal_sign` and `cfx_sign` in it.

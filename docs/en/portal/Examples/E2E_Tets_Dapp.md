@@ -4,8 +4,8 @@ title: A Demo Dapp We Are Using To Test ConfluxPortal
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Quick_Start/E2E_Tets_Dapp.md
 ---
 
-[Here](../../../../e2e_test_demo/) is a page for testing Conflux
-Portal functions. It contains code examples for testing: 
+[Here](https://conflux-portal-docs.conflux-chain.org/e2e_test_demo/) is a page for testing Conflux
+Portal functions. It contains code examples for testing:
 
 - connect to ConfluxPortal
 - deploy contract on Conflux Testnet
@@ -17,4 +17,4 @@ Portal functions. It contains code examples for testing:
 
 You can find the source code on
 [github](https://github.com/Conflux-Chain/conflux-portal/blob/develop/test/e2e/contract-test/contract.js)
-or just download the page and use it at your purpose. 
+or just download the page and use it at your purpose.
