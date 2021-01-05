@@ -46,7 +46,7 @@ const initialize = () => {
   const sendButton = document.getElementById('sendButton')
   const createToken = document.getElementById('createToken')
   const createBalanceTracker = document.getElementById('createBalanceTracker')
-  createBalanceTracker.style.display = 'none'
+  // createBalanceTracker.style.display = 'none'
   const transferTokens = document.getElementById('transferTokens')
   const approveTokens = document.getElementById('approveTokens')
   const transferTokensWithoutGas = document.getElementById(
@@ -193,10 +193,10 @@ const initialize = () => {
         .constructor()
         .sendTransaction({
           from: accounts[0],
-          gasPrice: 10000000000,
+          gasPrice: 1,
         })
         .confirmed()
-        .catch((error) => {
+        .catch(error => {
           contractStatus.innerHTML = 'Deployment Failed'
           throw error
         })
@@ -221,7 +221,7 @@ const initialize = () => {
           .sendTransaction({
             value: '0x3782dace9d900000',
             from: accounts[0],
-            gasPrice: 10000000000,
+            gasPrice: 1,
           })
           .confirmed()
         console.log(depositResult)
@@ -235,7 +235,7 @@ const initialize = () => {
             from: accounts[0],
             gas: 600000,
             storageLimit: 0,
-            gasPrice: 10000000000,
+            gasPrice: 1,
           })
           .confirmed()
         console.log(withdrawResult)
@@ -255,7 +255,7 @@ const initialize = () => {
           from: accounts[0],
           to: accounts[0],
           value: '0x29a2241af62c0000',
-          gasPrice: 10000000000,
+          gasPrice: 1,
         })
         .confirmed()
       console.log(txResult)
@@ -324,10 +324,10 @@ const initialize = () => {
         .sendTransaction({
           from: accounts[0],
           storageLimit: 5000,
-          gasPrice: 10000000000,
+          gasPrice: 1,
         })
         .confirmed()
-        .catch((error) => {
+        .catch(error => {
           throw error
         })
 
@@ -498,10 +498,10 @@ const initialize = () => {
         .sendTransaction({
           from: accounts[0],
           storageLimit: 5000,
-          gasPrice: 10000000000,
+          gasPrice: 1,
         })
         .confirmed()
-        .catch((error) => {
+        .catch(error => {
           tokenAddress.innerHTML = 'Creation Failed'
           throw error
         })
@@ -525,14 +525,14 @@ const initialize = () => {
       transferTokensWithoutGas.disabled = false
       approveTokensWithoutGas.disabled = false
 
-      transferTokens.onclick = async (event) => {
+      transferTokens.onclick = async event => {
         console.log(`event`, event)
         const transferResult = humanstandardtokenContract
-          .transfer('0x1f318C334780961FB129D2a6c30D0763d9a5C970', '15000')
+          .transfer('0x1f318c334780961fb129d2a6c30d0763d9a5c970', '15000')
           .sendTransaction({
             from: accounts[0],
             to: humanstandardtokenContract.address,
-            gasPrice: 10000000000,
+            gasPrice: 1,
           })
           .confirmed()
         console.log(transferResult)
@@ -540,24 +540,24 @@ const initialize = () => {
 
       approveTokens.onclick = async () => {
         const approveResult = await humanstandardtokenContract
-          .approve('0x8bc5baF874d2DA8D216aE9f137804184EE5AfEF4', '70000')
+          .approve('0x8bc5baf874d2da8d216ae9f137804184ee5afef4', '70000')
           .sendTransaction({
             from: accounts[0],
             to: humanstandardtokenContract.address,
-            gasPrice: 10000000000,
+            gasPrice: 1,
           })
           .confirmed()
         console.log(approveResult)
       }
 
-      transferTokensWithoutGas.onclick = async (event) => {
+      transferTokensWithoutGas.onclick = async event => {
         console.log(`event`, event)
         const transferResult = await humanstandardtokenContract
-          .transfer('0x1f318C334780961FB129D2a6c30D0763d9a5C970', '15000')
+          .transfer('0x1f318c334780961fb129d2a6c30d0763d9a5c970', '15000')
           .sendTransaction({
             from: accounts[0],
             to: humanstandardtokenContract.address,
-            gasPrice: 10000000000,
+            gasPrice: 1,
           })
           .confirmed()
         console.log(transferResult)
@@ -565,11 +565,11 @@ const initialize = () => {
 
       approveTokensWithoutGas.onclick = async () => {
         const approveResult = await humanstandardtokenContract
-          .approve('0x1f318C334780961FB129D2a6c30D0763d9a5C970', '70000')
+          .approve('0x1f318c334780961fb129d2a6c30d0763d9a5c970', '70000')
           .sendTransaction({
             from: accounts[0],
             to: humanstandardtokenContract.address,
-            gasPrice: 10000000000,
+            gasPrice: 1,
           })
           .confirmed()
         console.log(approveResult)
@@ -604,10 +604,7 @@ const initialize = () => {
       confluxJS.provider.sendAsync(
         {
           method: 'cfx_sign',
-          params: [
-            conflux.selectedAddress,
-            keccak256.digest(sampleData),
-          ],
+          params: [conflux.selectedAddress, keccak256.digest(sampleData)],
           from: conflux.selectedAddress,
         },
         (err, result) => {
@@ -638,6 +635,7 @@ const initialize = () => {
           Person: [
             { name: 'name', type: 'string' },
             { name: 'wallet', type: 'address' },
+            { name: 'happy', type: 'bool' },
           ],
           Mail: [
             { name: 'from', type: 'Person' },
@@ -654,10 +652,12 @@ const initialize = () => {
         },
         message: {
           from: {
+            happy: true,
             name: 'Cow',
-            wallet: '0xCD2a3d9F938E13CD947Ec05AbC7FE734Df8DD826',
+            wallet: '0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826',
           },
           to: {
+            happy: false,
             name: 'Bob',
             wallet: '0xbBbBBBBbbBBBbbbBbbBbbbbBBbBbbbbBbBbbBBbB',
           },
@@ -691,7 +691,7 @@ const initialize = () => {
           from: accounts[0],
           to: accounts[0],
           data: signedData,
-          gasPrice: 10000000000,
+          gasPrice: 1,
         })
         .confirmed()
       sendSignedTypedDataResult.innerText = JSON.stringify(txResult, 2)
@@ -712,13 +712,13 @@ const initialize = () => {
 
   if (isConfluxPortalInstalled()) {
     conflux.autoRefreshOnNetworkChange = false
-    conflux.on('networkChanged', (networkId) => {
+    conflux.on('networkChanged', networkId => {
       networkDiv.innerHTML = networkId
     })
-    conflux.on('chainIdChanged', (chainId) => {
+    conflux.on('chainIdChanged', chainId => {
       chainIdDiv.innerHTML = chainId
     })
-    conflux.on('accountsChanged', (newAccounts) => {
+    conflux.on('accountsChanged', newAccounts => {
       const connecting = Boolean(
         (!accounts || !accounts.length) && newAccounts && newAccounts.length
       )
