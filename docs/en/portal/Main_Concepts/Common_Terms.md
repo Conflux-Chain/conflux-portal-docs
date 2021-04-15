@@ -3,6 +3,7 @@ id: common_terms
 title: Common Terms
 custom_edit_url: https://github.com/Conflux-Chain/conflux-portal-docs/edit/master/docs/en/portal/Main_Concepts/Common_Terms.md
 ---
+
 ## Words are Hard
 
 This is a list of terms you might encounter when using the ConfluxPortal interface.
@@ -12,31 +13,32 @@ This is a list of terms you might encounter when using the ConfluxPortal interfa
 ---
 
 ### Wallet
+
 - The interface / client / wrapper / holder that you use to manage your account(s).
 - Example: ConfluxPortal, your Ledger Hardware Wallet, a Multisig Wallet Contract.
 
 ### Account
+
 - A public & private keypair that "holds" your funds.
 - Your funds are actually stored on the blockchain, not in the wallet or account.
-- Just like your Reddit account has a `username (public)` and  `password (private)`, so does your Conflux account. For additional security, you can use a password to encrypt your private key which would result in a ` username (public)` and ` password (private)` and ` password for that password (private + more secure)`. See the ` Keystore File` section.
+- Just like your Reddit account has a `username (public)` and `password (private)`, so does your Conflux account. For additional security, you can use a password to encrypt your private key which would result in a ` username (public)` and ` password (private)` and ` password for that password (private + more secure)`. See the ` Keystore File` section.
 
 ### Address _("Public Key")_
 
 - You use this to send funds **to** an account.
 - Sometimes referred to as the "public key"
-- A string made up of `0x` + `40 hexadecimal characters`.
-- In Conflux, the contract address begins with `0x8`.
-- In Conflux, the account address begins with `0x1`.
-- Example: `0x16a85356dcb5b307096726fb86a78c59d38e08ee`
-
+- A string base32 address that conforms to [CIP-37](https://github.com/Conflux-Chain/CIPs/blob/master/CIPs/cip-37.md#specification).
+- In conflux the address generated from the same private key on different network (mainnet, testnet) is different.
+- Example:
+  - On mainnet: `cfx:aanmuy405w45gb2kp6xt1bzhvvp7hduj72rvv2vbyu` and the verbose one is `CFX:TYPE.USER:AANMUY405W45GB2KP6XT1BZHVVP7HDUJ72RVV2VBYU`
+  - On testnet: `cfxtest:aanmuy405w45gb2kp6xt1bzhvvp7hduj72h4cj1nu4` and the verbose one is `CFXTEST:TYPE.USER:AANMUY405W45GB2KP6XT1BZHVVP7HDUJ72H4CJ1NU4`
 
 ### Public Key
 
 - In cryptography, you have a keypair: the public and private key.
 - You can derive a public key from a private key, but cannot derive a private key from a public key.
 - (Advanced) In Conflux, the address "acts" like the public key, but it's not actually the public key.
-- (Advanced) In Conflux, the public key is derived from the private key and is 128 hex characters. You then take the `"SHA3" (Keccak-256)` hash of this (64 characters), take the last 40 characters, and prefix with `0x`, give you your 42-character address.
-
+- (Advanced) In Conflux, the public key is derived from the private key and is 128 hex characters. <!-- You then take the `"SHA3" (Keccak-256)` hash of this (64 characters), take the last 40 characters, and prefix with `0x`, give you your 42-character address. -->
 
 ### Private Key
 
@@ -48,169 +50,101 @@ This is a list of terms you might encounter when using the ConfluxPortal interfa
 - This is the string you need to send from your account. Without it you cannot access your funds. Although, you don't need to save this raw, unencrypted private key in this format. You can saving the fancy versions of it (e.g. the Keystore File / Mnemonic Phrase).
 - Example: `afdfd9c3d2095ef696594f6cedcae59e72dcd697e2a7521b1578140422a4f890`
 
+<!-- ### Keystore File -->
 
-### Keystore File
-
-- Encrypted version of your private key in JSON format (though it does not have a JSON extension)
-  
-- A fancy version of your private key that is protected by a password of your choosing.
-  
-- When combined with the password, it has the private key.
-  
-- Safer than a private key because you need the password.
-  
-- File name usually is in the format `UTC` + `--` + `DATE_CREATED` + `--` + `YOUR_ADDRESS_WITHOUT_THE_OX`
-- Example of File Name: `UTC--2017-07-02T20-33-09.177Z--06a85356dcb5b307096726fb86a78c59d38e08ee`
-  
-- Example of Contents: `
-  {'{"version":3,"id":"aa811d53-fe9a-44a2-bd1c-e737007b5591","address":"06a85356dcb5b307096726fb86a78c59d38e08ee","Crypto":{"ciphertext":"f5a7cc8d4b8cf93510b0d0d057f3a52ac79fd48e619e0638c4ffd978ca180248","cipherparams":{"iv":"975ab00192e2dd74170e91ca59c0b0bd"},"cipher":"aes-128-ctr","kdf":"scrypt","kdfparams":{"dklen":32,"salt":"0210f0d0b99e440dfbceb36373304638bac093a367ee7da6411cd165f7aa907a","n":1024,"r":8,"p":1},"mac":"8197a747a3855a10546a2ff939c36470daed78e393b670efa0c12fe3b23dd7e3"}}'}
-    `
-  
-- (pw: `mypassword`)
-  
-
+<!-- - Encrypted version of your private key in JSON format (though it does not have a JSON extension) -->
+<!-- - A fancy version of your private key that is protected by a password of your choosing. -->
+<!-- - When combined with the password, it has the private key. -->
+<!-- - Safer than a private key because you need the password. -->
+<!-- - File name usually is in the format `UTC` + `--` + `DATE_CREATED` + `--` + `YOUR_ADDRESS_WITHOUT_THE_OX` -->
+<!-- - Example of File Name: `UTC--2017-07-02T20-33-09.177Z--06a85356dcb5b307096726fb86a78c59d38e08ee` -->
+<!-- - Example of Contents: `{'{"version":3,"id":"aa811d53-fe9a-44a2-bd1c-e737007b5591","address":"06a85356dcb5b307096726fb86a78c59d38e08ee","Crypto":{"ciphertext":"f5a7cc8d4b8cf93510b0d0d057f3a52ac79fd48e619e0638c4ffd978ca180248","cipherparams":{"iv":"975ab00192e2dd74170e91ca59c0b0bd"},"cipher":"aes-128-ctr","kdf":"scrypt","kdfparams":{"dklen":32,"salt":"0210f0d0b99e440dfbceb36373304638bac093a367ee7da6411cd165f7aa907a","n":1024,"r":8,"p":1},"mac":"8197a747a3855a10546a2ff939c36470daed78e393b670efa0c12fe3b23dd7e3"}}'} ` -->
+<!-- - (pw: `mypassword`) -->
 
 ### Mnemonic Phrase / Seed Phrase / Seed Words
 
 - Another fancy version of your private key, that is actually used to derive multiple private keys.
-  
 - A (typically) 12 or 24 word phrase that allows you to access infinite number of accounts.
-  
 - Used by Ledger, TREZOR, ConfluxPortal, Jaxx, and others.
-  
 - Originates from <a href='https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki' target='_blank'>BIP 39 Spec</a>.
-  
 - The accounts you can access with this phrase are determined by the "path".
-  
 - Example 12-words: `brain surround have swap horror body response double fire dumb bring hazard`
-  
 - Example 24-words: `card enrich gesture connect kick topple fan body blind engine lemon swarm venue praise addict agent unaware equal bean sing govern income link leg`
-  
-
 
 ### Hardware Wallet:
 
 - Typically, a single-purpose device that "holds" your private key(s), ensuring your private keys are safe.
-  
 - Typically, they use a 24-word phrase. This phrase you should write down (not on your computer) and store separately from your hardware wallet.
-  
 - If you lose your hardware wallet, you can still gain access to your accounts & funds via the word-phrase you wrote down.
-  
 - Never type the word-phrase on your computer. It defeats the purpose of your hardware wallet.
-  
 - <a href='https://kb.myetherwallet.com/hardware-wallets/' target='_blank'> See here for more information about Hardware Wallets</a>
-  
 
+<!-- ### Identicon / AddressIdenticon / AddressIcon: -->
 
-### Identicon / AddressIdenticon / AddressIcon:
-
-- The colorful blob of colors that corresponds to your address.
-  
-- It is an easy way to see if your address is correct.
-  
-- <a href='http://i.imgur.com/lHUrIiZ.jpg' target=''> Example 1 </a>
-  
-- <a href='http://i.imgur.com/FvyLewS.jpg' target=''> Example 2 </a>
-  
-- <em>Note: the above addresses are a single character different but have remarkably different icons & colors. Magic!</em>
-  
-
+<!-- - The colorful blob of colors that corresponds to your address. -->
+<!-- - It is an easy way to see if your address is correct. -->
+<!-- - <a href='http://i.imgur.com/lHUrIiZ.jpg' target=''> Example 1 </a> -->
+<!-- - <a href='http://i.imgur.com/FvyLewS.jpg' target=''> Example 2 </a> -->
+<!-- - <em>Note: the above addresses are a single character different but have remarkably different icons & colors. Magic!</em> -->
 
 ### Hexadecimal
 
 - Used all over Conflux for a variety of things, a hexadecimal string is comprised of the numbers `0 1 2 3 4 5 6 7 8 9` and `A B C D E F`
-  
-
 
 ### Seed
 
 - The input given to derive a private key. This should always be generated in a truly random way, not something you make up with your measly human brain.
-  
 - If you chose the seed, it is known as a `brain wallet`
-  
-
 
 ### Brain Wallet
 
 - An account generated from a seed or password or passphrase of your choosing.
-  
 - Humans are not capable of generating enough entropy and therefore the wallets derived from these phrases are insecure.
-  
 - Brain wallets can be brute forced by super fast computers.
-  
 - <a href='https://www.reddit.com/r/metamask/comments/45y8m7/brain_wallets_are_now_generally_shunned_by/' target='_blank'> Brain wallet are insecure. </a>
-  
 - Don't use brain wallets.
-  
-
-
 
 ### Entropy
 
 - Also known as "randomness".
-  
 - The more random something is, the more entropy it has, and the more secure it is.
-  
 - Usually defined in "bits of entropy" or the number of years it would take to brute-force a **\_\_\_\_** (e.g. private key) derived with that much entropy.
-  
 - Conflux private keys are 256-bit keys
-  
 - 24-Word mnemonic phrases are also 256 bits of entropy. 2048 words in the dictionary. 11 bits of entropy (the words). `11 * 24 = 264`. The last word is a checksum.
-  
-
 
 ### Derive / Derivation
 
 - To derive something is to obtain it from an original source.
-  
 - For example, if we were to derive a Keystore from a private key and a password, this means that the Keystore is made from these two sources.
-  
 - The Keystore is a product of the two, thus it is derived from them.
-  
-
 
 ### Encryption
 
 - Encryption is the act of taking a string of letters/numbers, like your private key, and turning them into another string of letters/numbers through a method of private translation.
-  
 - There are various different encryption methods.
-  
 - Encryption offers protection against those trying to steal your information!
-  
-
 
 ### Encrypted vs Unencrypted Keys
 
 - An unencrypted private key is 64 characters long, and it is used to unlock or restore wallets.
-  
 - An encrypted key is also 64 letters long and is a regular private key that has gone through the process of encryption, as defined above.
-  
 - For example, if the world ‘Apple’ was your shortened private key, then it was encrypted three letters down the alphabet, your new shortened encrypted key would be ‘Dssoh’. Since you know the way to encrypt this key, you could derive the original private key from it by reversing the method of encryption.
-  
 - Usually encrypted private keys are kept within the extension or device they are encrypted by, and they remain out of sight from the user. This is meant to add another layer of security to keep a user’s wallet information safe.
-  
-
 
 ### Decentralize / Decentralization
 
 - The process of transferring authority of a single entity (ex. Government or large corporation) to multiple smaller entities.
-  
-
 
 ### Trustless
 
 - A distributed trustless consensus which the blockchain is responsible for. Since everyone has a copy of the ledger of all transactions ever executed, there is no need for a third-party. You can verify the transactions yourself, however the Conflux blockchain and Bitcoin blockchain were created to ensure rules and agreements between all parties are executed when all conditions are met.
-  
-
 
 ### Smart Contracts
 
 - A piece of code (or program) that is stored on the blockchain network. Conditions of the contract are predefined by the users, if all conditions are met, certain actions are executed by the contract (program).
-  
-
 
 ### Blockchain
 
 - A decentralized publicly owned ledger.
-  
+
 All feedback, rewrites, clarification, typo-fixing, and requests for additions are more than welcome. ?
